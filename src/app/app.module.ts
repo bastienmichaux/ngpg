@@ -7,16 +7,21 @@ import {RouterModule} from '@angular/router';
 import {CoreModule} from './core/core.module';
 import {AppRoutingModule} from './app-routing.module';
 import {HomeModule} from './smart/home/home.module';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
+    // angular modules
     BrowserModule,
     CommonModule,
-    CoreModule.forRoot(),
     RouterModule,
+    // angular material
+    BrowserAnimationsModule,
+    // application modules
+    CoreModule.forRoot(),
     AppRoutingModule,
     HomeModule
   ],
